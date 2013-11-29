@@ -1,3 +1,25 @@
 <h1>
+
 Hello
 </h1>
+
+ <%= simple_form_for @gift do |f| %>
+	<!-- placeholder gives default values for the fields -->
+	<%= f.input :name, :label => 'Your Name (First and Last)', :placeholder => 'Alex Thompson'%>
+	<%= f.input :email_addr, :label => 'Your email address' %>
+	<%= f.input :giver_gender, :label => 'Your gender', :placeholder => 'F or M' %>
+	<%= f.input :relationship, :label => 'Who are you purchasing for?' , :placeholder => 'My Mom, Husband, Father-in-law' %>
+	<%= f.input :occasion, :label => 'The occasion' , :placeholder => 'Birthday, 25th wedding anniversary, Christmas' %>
+	<%= f.input :occasion_date, :label => 'When is the occasion?' , :placeholder => '12/03/2013' %>
+	<%= f.input :budget_min, :label => 'What is your budget range? From', :placeholder => '$100' %>
+	<%= f.input :budget_max, :label => 'To ' , :placeholder => '$200' %>
+	<%= f.input :recipient_age_estimate, :label => 'Approximate age of your recipient' , :placeholder => '24, 45, 67, etc.' %>
+	<%= f.input :recipient_gender, :label => 'Gift recipient gender', :placeholder => 'F or M' %>
+	<%= f.input :recipient_info, :label => 'What comes to mind when you think of your person?  Tell us about them.' , :placeholder => 'He loves going fishing with his friends at the lake down the road.  He does not catch fish to eat, but rather mostly for fun and an excuse to catch up with friends' %>
+	<%= f.input :other_info, :label => 'Anything else we should know?' , :placeholder => 'He lives in another state from me, so I prefer gifts that are easy to ship' %>
+
+    <%= submit_tag 'Save', :class => 'btn btn-warning btn-large' %>
+
+<% end %>
+
+
